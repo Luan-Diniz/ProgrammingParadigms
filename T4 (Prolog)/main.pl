@@ -42,8 +42,12 @@ veiocom(namorado).
 todosDiferentes([]).
 todosDiferentes([H|T]) :- not(member(H, T)), todosDiferentes(T).
 
+/* X está à esquerda de Y (em qualquer posição à esquerda) */
 aEsquerda(X, Y, Lista) :- nth0(IndexX, Lista, X), nth0(IndexY, Lista, Y), IndexX < IndexY.
+
+/* X está à direita de Y (em qualquer posição à direita) */
 aDireita(X, Y, Lista) :- aEsquerda(Y, X, Lista).
+
 
 %Solucao
 solucao(ListaSolucao) :-
