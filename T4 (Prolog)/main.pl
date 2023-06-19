@@ -62,7 +62,7 @@ solucao(ListaSolucao) :-
 member(mulher(_,helen,_,_,_,namorado), ListaSolucao),
 
 %Quem veio comprar especiarias está exatamente à esquerda da mulher que veio com a irmã
-member(mulher(_,_,_,especiarias,_,_), mulher(_,_,_,_,_,irma), ListaSolucao),
+nextto(mulher(_,_,_,especiarias,_,_), mulher(_,_,_,_,_,irma), ListaSolucao),
 
 %Quem veio com o marido está ao lado da primeira mulher. --> (Ou seja, esta na posicao dois, portanto indice 1)
 nth0(1, ListaSolucao, mulher(_, _, _, _, _, marido)),
@@ -110,7 +110,7 @@ member(mulher(_,_,granadilho,queijos,_,_), ListaSolucao),
 nextto(mulher(_, _, _, _, _, marido), mulher(_, _, pitaya_amarela, _, _, _), ListaSolucao),
 
 %A moça que experimentou Pitaya Amarela chama-se Fernanda
-member(mulher(_, fernanda, pitaya_amarela, _, _, _)),
+member(mulher(_, fernanda, pitaya_amarela, _, _, _), ListaSolucao),
 
 %A Cláudia está exatamente à esquerda de quem experimentou Moranga.
 nextto(mulher(_, claudia, _, _, _, _), mulher(_, _, moranga, _, _, _), ListaSolucao),
