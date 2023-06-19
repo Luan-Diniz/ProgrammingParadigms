@@ -45,9 +45,6 @@ todosDiferentes([H|T]) :- not(member(H, T)), todosDiferentes(T).
 aEsquerda(X, Y, Lista) :- nth0(IndexX, Lista, X), nth0(IndexY, Lista, Y), IndexX < IndexY.
 aDireita(X, Y, Lista) :- aEsquerda(Y, X, Lista).
 
-aoLado(X, Y, Lista) :- nextto(X, Y, Lista); nextto(Y, X, Lista).
-
-
 %Solucao
 solucao(ListaSolucao) :-
     ListaSolucao = [mulher(Camisa1, Nome1, Experimentou1, Comprou1, Gastou1, Veiocom1),
