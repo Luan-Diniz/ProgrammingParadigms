@@ -1,4 +1,10 @@
-# Kojun
+# INE5416
+Aqui estão as atividades e trabalhos realizadas na disciplina Paradigmas de Programação (23.1 UFSC).
+Equipe: Luan Diniz, Alex Davis e Lucas Truppel
+
+
+
+# T1,T2 e T3 :Kojun
 
 Esse código encontra a solução de um puzzle Kojun por meio de backtracking a partir de uma
 matriz de números e uma matriz de regiões. O código foi implementado em quatro linguagens diferentes: Python, Haskell, Elixir e Prolog. 
